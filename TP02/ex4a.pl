@@ -1,7 +1,7 @@
-fact(N, F):- fact(N, 1, F).
-fact(0, F, F).
-fact(N, Acc, F):-
-    N > 0,
-    N1 is N-1,
-    Acc1 is Acc * N,
-    fact(N1, Acc1, F).
+factorial(0,1). 
+
+factorial(N,F) :-
+   N > 0,
+   N1 is N-1,
+   factorial(N1, F1),
+   F is N * F1.
